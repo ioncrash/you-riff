@@ -325,6 +325,9 @@ import Ember from 'ember';
   	},
 
   	actions: {
+      changeVideo(ytid) {
+        console.log('in ember-youtube, ytid is ', ytid)
+      },
   		play() {
   			if (this.get('player')) {
   				this.get('player').playVideo();

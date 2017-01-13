@@ -4,7 +4,8 @@ export default Ember.Component.extend({
   actions: {
     changeVideo() {
       let url = this.get('url');
-      console.log(url.split('=')[1]);
+      let ytid = url.split('=')[1];
+      this.sendAction('changeVideo', ytid);
     }
   }
 });
