@@ -1,2 +1,8 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+.chat-box {
+  height: 475px;
+  overflow: scroll;
+  width: 100%;
+}
