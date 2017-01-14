@@ -6,13 +6,9 @@ export default Ember.Component.extend({
   user: Ember.computed.alias('auth.credentials.email'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
-  ytid: "fmWTdJAG7EI",
   actions: {
     signOut () {
       this.sendAction('signOut');
     },
-    changeVideo(ytid) {
-      this.set('ytid', ytid)
-    },
-  },
+  }
 });

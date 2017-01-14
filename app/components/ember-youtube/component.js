@@ -326,7 +326,7 @@ import Ember from 'ember';
 
   	actions: {
       changeVideo(ytid) {
-        this.set('ytid', ytid);
+        this.send('changeVideo', ytid)
       },
   		play() {
   			if (this.get('player')) {
