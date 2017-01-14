@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('videos');
+  this.route('video', { path: 'videos/:video_id' });
 });
 
 export default Router;
