@@ -1,3 +1,4 @@
 {{#each model as |video|}}
   {{ember-youtube ytid=video.ytid}}
+  <button {{action 'openVideo' video}}>Riff on this!</button>
 {{/each}}
