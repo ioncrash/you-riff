@@ -1,5 +1,7 @@
 <div class='chat-box'>
-  {{#each video.riffs as |riff|}}
-    Hi I'm a riff
-  {{/each}}
+  <ol>
+    {{#each video.riffs as |riff|}}
+      <li>'{{riff.user.email}}: {{riff.text}}'</li>
+    {{/each}}
+  </ol>
 </div>

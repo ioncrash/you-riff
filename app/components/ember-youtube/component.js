@@ -264,6 +264,11 @@ import Ember from 'ember';
   		}
   	}),
 
+    timeChanged: observer('currentTime', function() {
+      console.log('currentTime is ', this.get('currentTime'));
+      this.send('timeChanged', currentTime);
+    }),
+
   	// A wrapper around the YouTube method to get the duration.
   	duration: computed({
   		get() {
