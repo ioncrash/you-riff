@@ -6,16 +6,17 @@ export default Ember.Route.extend({
   },
   actions: {
     changeVideo(ytid) {
-      console.log(ytid);
-      this.store.queryRecord( 'video', { ytid: ytid } )
-        .then((video_id) => {
-          this.transitionTo('video', video_id);
-        });
-      // if(result){
-
-      // } else {
-      // console.log('in else');
-      // }
+      let that = this;
+      return new Ember.RSVP.Promise(function(resolve) {
+        that.store.findAll('video')
+          .then(function(videos) {
+          resolve(videos.filterBy('ytid', ytid));
+          });
+      })
+      .then((videos) => {
+        let video_id = videos[0].get('id');
+        this.transitionTo('video', video_id);
+      });
     }
   }
 });
