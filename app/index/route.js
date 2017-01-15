@@ -28,13 +28,6 @@ export default Ember.Route.extend({
             });
         }
       });
-      // .then((newVid)=> {
-      //   console.log(newVid.get('id'));
-      // })
-      // .then((newVid) => {
-      //   // console.log(newVid)
-      //   this.transitionTo('video', newVid.get('id'));
-      // });
     }
   }
 });
