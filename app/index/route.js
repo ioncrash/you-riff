@@ -14,9 +14,27 @@ export default Ember.Route.extend({
           });
       })
       .then((videos) => {
-        let video_id = videos[0].get('id');
-        this.transitionTo('video', video_id);
+        if (videos.length > 0) {
+          let video = videos[0];
+          this.transitionTo('video', video.get('id'));
+        }
+        else {
+          let newVid = this.store.createRecord('video', {
+            ytid: ytid
+          });
+          newVid.save()
+            .then((newVid) => {
+              this.transitionTo('video', newVid.get('id'));
+            });
+        }
       });
+      // .then((newVid)=> {
+      //   console.log(newVid.get('id'));
+      // })
+      // .then((newVid) => {
+      //   // console.log(newVid)
+      //   this.transitionTo('video', newVid.get('id'));
+      // });
     }
   }
 });
