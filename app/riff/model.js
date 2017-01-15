@@ -5,5 +5,5 @@ export default DS.Model.extend({
   flagged: DS.attr('boolean'),
   stamp: DS.attr('number'),
   video: DS.belongsTo('video'),
-  user: DS.belongsTo('user')
+  // user: DS.belongsTo('user')
 });
