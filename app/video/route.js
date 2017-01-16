@@ -29,8 +29,13 @@ export default Ember.Route.extend({
         }
       });
     },
-    createRiff(riffText) {
-      console.log('in video route, riffText = ', riffText);
+    createRiff(riffText, currentTime) {
+      console.log('currentTime is ', currentTime)
+      // this.get('store').createRecord('riff', {
+      //   text: riffText,
+      //   flagged: false,
+      //   currentTime:
+      // })
     }
   }
 });

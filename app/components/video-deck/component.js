@@ -12,7 +12,7 @@ export default Ember.Component.extend({
       console.log(this.get('currentTime'));
     },
     createRiff() {
-      this.sendAction('createRiff', this.get('riffText'));
+      this.sendAction('createRiff', this.get('riffText'), this.get('currentTime'));
     }
   },
 });
