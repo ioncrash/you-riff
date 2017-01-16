@@ -5,8 +5,8 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('riff', params.riff_id);
   },
   actions: {
-    save() {
-      this.get('model').save();
+    save(riff) {
+      console.log('in riff route, riff is ', riff)
     }
   }
 });
