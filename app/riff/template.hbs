@@ -2,8 +2,7 @@
     <div class="row">
         <div class="col-md-10">{{ember-youtube ytid=model.video.ytid timeChanged='timeChanged'}}</div>
         <div class="col-md-2">
-          {{input class="edit-riff-box" value=model.text}}
-          <button class="btn btn-submit edit-riff-btn">Submit</button>
+          {{edit-riff-panel riff=model}}
         </div>
     </div>
     <div class="row"></div>
