@@ -7,6 +7,10 @@ export default Ember.Route.extend({
   actions: {
     save(riff) {
       riff.save();
+    },
+
+    cancel(list) {
+      list.rollbackAttributes();
     }
   }
 });
