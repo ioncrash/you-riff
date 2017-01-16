@@ -1,7 +1,14 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8">{{ember-youtube ytid=video.ytid timeChanged='timeChanged'}}</div>
-        <div class="col-md-4">{{chat-box video=video currentTime=currentTime}}</div>
+        <div class="col-md-8">
+          {{ember-youtube ytid=video.ytid timeChanged='timeChanged'}}
+        </div>
+        <div class="col-md-4">
+          <div>
+            {{chat-box video=video currentTime=currentTime}}
+            {{textarea placeholder="Type your riff here!" value=}}
+          </div>
+        </div>
     </div>
     <div class="row"></div>
 </div>
