@@ -260,14 +260,10 @@ import Ember from 'ember';
   			return value;
   		},
   		set(key, value) {
+        this.sendAction('timeChanged', value)
   			return value;
   		}
   	}),
-
-    timeChanged: observer('currentTime', function() {
-      console.log('currentTime is ', this.get('currentTime'));
-      this.send('timeChanged', currentTime);
-    }),
 
   	// A wrapper around the YouTube method to get the duration.
   	duration: computed({
