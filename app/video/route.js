@@ -28,6 +28,9 @@ export default Ember.Route.extend({
             });
         }
       });
+    },
+    createRiff(riffText) {
+      console.log('in video route, riffText = ', riffText);
     }
   }
 });
