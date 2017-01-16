@@ -6,7 +6,10 @@
         <div class="col-md-4">
           <div>
             {{chat-box video=video currentTime=currentTime}}
-            {{textarea placeholder="Type your riff here!" value=}}
+            <form {{action 'submit'}}>
+              {{textarea placeholder="Type your riff here!" class="create-riff-box"}}
+              <button class="btn btn-submit create-riff-btn">Riff</button>
+            </form>
           </div>
         </div>
     </div>
