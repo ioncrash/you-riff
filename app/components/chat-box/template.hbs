@@ -5,3 +5,7 @@
     {{/each}}
   </ol>
 </div>
+<form {{action 'createRiff' on='submit'}}>
+  {{textarea value=riff.text placeholder="Type your riff here!" class="create-riff-box"}}
+  <button class="btn btn-submit create-riff-btn">Riff</button>
+</form>

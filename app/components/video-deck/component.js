@@ -11,8 +11,5 @@ export default Ember.Component.extend({
       this.set('currentTime', currentTime);
       console.log(this.get('currentTime'));
     },
-    createRiff() {
-      this.sendAction('createRiff', this.get('riffText'), this.get('currentTime'));
-    }
   },
 });
