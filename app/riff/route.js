@@ -11,6 +11,14 @@ export default Ember.Route.extend({
 
     cancel(list) {
       list.rollbackAttributes();
+    },
+
+    deleteRiff(riff) {
+      let video = riff.get('video');
+      riff.destroyRecord()
+        .then(()=>{
+          this.transitionTo('video', video);
+        })
     }
   }
 });
