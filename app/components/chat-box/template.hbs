@@ -1,7 +1,7 @@
 <div class='chat-box'>
   <ol>
     {{#each video.riffs as |riff|}}
-      <li>'{{riff.user.email}}: {{riff.text}}'</li>
+        {{riff-component riff=riff currentTime=currentTime}}
     {{/each}}
   </ol>
 </div>

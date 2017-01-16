@@ -1,12 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  currentTime: null,
+
   actions: {
     changeVideo(ytid) {
       this.sendAction('changeVideo', ytid);
     },
     timeChanged(currentTime) {
-      console.log('in video deck, current time is ', currentTime)
+      this.set('currentTime', currentTime);
+      console.log(this.get('currentTime'));
     }
   },
 });
