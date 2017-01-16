@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     save(riff) {
-      console.log('in riff route, riff is ', riff)
+      riff.save();
     }
   }
 });
