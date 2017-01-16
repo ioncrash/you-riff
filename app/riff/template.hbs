@@ -1,1 +1,10 @@
-{{riff-component riff=model}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">{{ember-youtube ytid=model.video.ytid timeChanged='timeChanged'}}</div>
+        <div class="col-md-2">{{riff-component riff=model}}</div>
+    </div>
+    <div class="row"></div>
+</div>
+
+
+{{youtube-finder changeVideo='changeVideo'}}
