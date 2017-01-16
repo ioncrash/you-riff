@@ -9,8 +9,9 @@ export default Ember.Route.extend({
       riff.save();
     },
 
-    cancel(list) {
-      list.rollbackAttributes();
+    cancel(riff) {
+      riff.rollbackAttributes();
+      this.transitionTo('video', riff.get('video'));
     },
 
     deleteRiff(riff) {
