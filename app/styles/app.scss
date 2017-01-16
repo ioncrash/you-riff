@@ -9,7 +9,9 @@
 
 .edit-riff-box {
   height: 440px;
+  overflow: auto;
   width: 100%;
+  word-wrap: normal;
 }
 
 .edit-riff-btn {
