@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('videos');
   this.route('video', { path: 'videos/:video_id' });
+  this.route('riff', { path: 'riffs/:riff_id' });
 });
 
 export default Router;

@@ -5,5 +5,8 @@ export default Ember.Component.extend({
     changeVideo(ytid) {
       this.sendAction('changeVideo', ytid);
     },
+    timeChanged(currentTime) {
+      console.log('in video deck, current time is ', currentTime)
+    }
   },
 });

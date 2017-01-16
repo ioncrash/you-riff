@@ -1,1 +1,7 @@
-<div class='chat-box'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an ajfhdjksdh lkhdfkjshfdkljshfkjsd hfkshdlkshfdklshdkjhsk fhdkslfhksdhfklshdkj hfskdhfkshdfkshdkhskfdhim id est laborum.</div>
+<div class='chat-box'>
+  <ol>
+    {{#each video.riffs as |riff|}}
+      <li>'{{riff.user.email}}: {{riff.text}}'</li>
+    {{/each}}
+  </ol>
+</div>
