@@ -6,9 +6,9 @@ export default Ember.Route.extend({
   },
   actions: {
     openVideo(video) {
-      // this.transitionTo('video', video);
-      console.log('inside openVideo, video is: ', video);
-      console.log('video.users is ', video.users)
+      this.transitionTo('video', video);
+      // console.log('inside openVideo, video is: ', video);
+      // console.log('video.users is ', video.users)
     }
   }
 });
