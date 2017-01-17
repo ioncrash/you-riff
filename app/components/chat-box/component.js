@@ -11,11 +11,9 @@ export default Ember.Component.extend({
 
   actions: {
     createRiff() {
-      console.log('this is ', this);
       let data = this.get('newRiff');
       data.video = this.get('video');
       data.stamp = this.get('videoTime');
-      console.log('newRiff = ', this.get('newRiff'));
       this.sendAction('createRiff', this.get('newRiff'));
     }
   }
