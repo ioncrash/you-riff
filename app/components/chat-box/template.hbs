@@ -1,6 +1,6 @@
 <div class='chat-box'>
   <ol>
-    {{#each video.riffs as |riff|}}
+    {{#each sortedRiffs as |riff|}}
         {{riff-component riff=riff currentTime=currentTime}}
     {{/each}}
   </ol>
