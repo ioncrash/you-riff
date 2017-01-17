@@ -4,9 +4,6 @@ export default Ember.Component.extend({
   currentTime: null,
 
   actions: {
-    changeVideo(ytid) {
-      this.sendAction('changeVideo', ytid);
-    },
     timeChanged(currentTime) {
       this.set('currentTime', currentTime);
     },
