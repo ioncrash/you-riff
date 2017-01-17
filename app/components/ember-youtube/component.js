@@ -260,7 +260,7 @@ import Ember from 'ember';
   			return value;
   		},
   		set(key, value) {
-        this.sendAction('timeChanged', value)
+        this.sendAction('timeChanged', value);
   			return value;
   		}
   	}),
@@ -327,7 +327,7 @@ import Ember from 'ember';
 
   	actions: {
       changeVideo(ytid) {
-        this.send('changeVideo', ytid)
+        this.send('changeVideo', ytid);
       },
   		play() {
   			if (this.get('player')) {

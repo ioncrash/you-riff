@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     createRiff(newRiff) {
       let riffSave = this.get('store').createRecord('riff', newRiff);
-      console.log(riffSave)
+      console.log(riffSave);
       riffSave.save();
     },
   }
