@@ -1,9 +1,7 @@
 <div class='chat-box'>
-  <ol>
-    {{#each sortedRiffs as |riff|}}
-        {{riff-component riff=riff currentTime=currentTime}}
-    {{/each}}
-  </ol>
+  {{#each sortedRiffs as |riff|}}
+      {{riff-component riff=riff currentTime=currentTime}}
+  {{/each}}
 </div>
 <form {{action 'createRiff' on='submit'}}>
   {{textarea value=newRiff.text placeholder="Type your riff here!" class="create-riff-box"}}
