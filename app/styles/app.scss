@@ -60,7 +60,7 @@ ul {
   -moz-appearance: textfield-multiline;
   -webkit-appearance: textarea;
   border: 1px solid gray;
-  height: 325px;
+  height: 282px;
   overflow: auto;
   padding: 2px;
   resize: both;
@@ -88,6 +88,11 @@ ul {
   @media (max-width: 698px) {
     width: calc(100% - 52.5px);
   }
+}
+
+.flag-riff-button {
+  clear: both;
+  height: 31px;
 }
 
 .navbar-form {

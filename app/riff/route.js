@@ -20,6 +20,5 @@ export default Ember.Route.extend({
         .then(()=>{
           this.transitionTo('video', video);
         })
-    }
-  }
+    },
 });
