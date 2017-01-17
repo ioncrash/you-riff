@@ -17,6 +17,10 @@ export default Ember.Component.extend({
       data.video = this.get('video');
       data.stamp = this.get('videoTime');
       this.sendAction('createRiff', this.get('newRiff'));
+      this.set('newRiff', {
+        text: null,
+        flagged: false
+      });
     }
   }
 });
