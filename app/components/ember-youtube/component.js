@@ -5,8 +5,8 @@ import Ember from 'ember';
   export default Ember.Component.extend({
   	classNames: ['EmberYoutube'],
   	ytid: null,
-  	width: 778,
-  	height: 475,
+  	width: 640,
+  	height: 360,
 
   	// These options are used to load a video.
   	startSeconds: undefined,
