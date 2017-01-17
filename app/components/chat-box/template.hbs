@@ -1,6 +1,6 @@
 <div class='chat-box'>
   {{#each sortedRiffs as |riff|}}
-      {{riff-component riff=riff currentTime=currentTime}}
+      <div class="one-riff">{{riff-component riff=riff currentTime=currentTime}}</div>
   {{/each}}
 </div>
 <form {{action 'createRiff' on='submit'}}>
