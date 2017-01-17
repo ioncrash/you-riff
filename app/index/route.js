@@ -5,5 +5,10 @@ export default Ember.Route.extend({
     return this.get('store').findAll('video');
   },
   actions: {
+    createRiff(newRiff) {
+      let riffSave = this.get('store').createRecord('riff', newRiff);
+      console.log(riffSave)
+      riffSave.save();
+    },
   }
 });
