@@ -1,11 +1,11 @@
 <form class="edit-riff-panel" {{action 'save' on='submit'}}>
-  <h4>{{user}}:</h4>
+  <h4>{{riff.user.email}}:</h4>
   {{textarea class="edit-riff-box" placeholder="Edit your riff here!" value=riff.text}}
   {{#if isUser}}
     <button type="submit" class="btn btn-submit edit-riff-btn">Submit</button>
     <button {{action 'cancel'}} class='btn cancel-riff-btn'>Cancel</button>
     <button {{action 'deleteRiff'}} class='btn delete-riff-btn btn-danger'>Delete</button>
   {{else}}
-    <button {{action 'flagRiff'}} class='btn flag-riff-btn'>Flag this riff</button>
+    <button {{action 'flagRiff'}} class='btn flag-riff-btn btn-danger'>Flag this riff</button>
   {{/if}}
 </form>
