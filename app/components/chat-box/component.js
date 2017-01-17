@@ -23,6 +23,9 @@ export default Ember.Component.extend({
           flagged: false
         });
       }
+    },
+    clickRiff() {
+      this.sendAction('clickRiff', this.get('riff'));
     }
   }
 });
