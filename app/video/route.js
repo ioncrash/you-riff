@@ -29,5 +29,10 @@ export default Ember.Route.extend({
         }
       });
     },
+    createRiff(newRiff) {
+      let riffSave = this.get('store').createRecord('riff', newRiff);
+      console.log(riffSave)
+      riffSave.save();
+    }
   }
 });
