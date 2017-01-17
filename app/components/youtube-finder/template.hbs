@@ -1,4 +1,13 @@
-<form {{action 'changeVideo' on='submit'}}>
-  {{input placeholder='video url' value=url}}
-  <button type='submit'>Submit</button>
+{{!-- <form class="search-form" {{action 'changeVideo' on='submit'}}>
+  {{input class="search-box" placeholder='video url' value=url}}
+  <button class="search-btn" type='submit'>Submit</button>
+</form> --}}
+
+<form class="navbar-form search-form" {{action 'changeVideo' on='submit'}}>
+  <div class="input-group">
+    {{input type="text" value=url class="form-control search-box" placeholder="video url"}}
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit">Go!</button>
+    </div>
+  </div>
 </form>

@@ -7,6 +7,9 @@
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
         <li>{{#link-to "videos"}}Videos{{/link-to}}</li>
       </ul>
+      <div class="col-sm-3 col-md-3">
+        {{youtube-finder changeVideo='changeVideo'}}
+      </div>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>

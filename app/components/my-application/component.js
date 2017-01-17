@@ -7,6 +7,10 @@ export default Ember.Component.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   actions: {
+    changeVideo(ytid) {
+      // console.log('in my-application, ytid is ', ytid)
+      this.sendAction('changeVideo', ytid);
+    },
     signOut () {
       this.sendAction('signOut');
     },

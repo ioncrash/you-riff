@@ -1,6 +1,14 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+body {
+  background-color: rgb(241,241,241);
+}
+
+.cancel-riff-btn {
+  height: 31px;
+}
+
 .chat-box {
   -moz-appearance: textfield-multiline;
   -webkit-appearance: textarea;
@@ -33,6 +41,16 @@
   height: 31px;
 }
 
-.cancel-riff-btn {
-  height: 31px;
+.search-box {
+  height: 40px;
+  margin-top: 4px;
+}
+
+.search-btn {
+  display: inline-block;
+  float: left;
+}
+
+.search-li {
+  height: 50px;
 }
