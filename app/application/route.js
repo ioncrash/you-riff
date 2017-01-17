@@ -5,29 +5,33 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   actions: {
-    changeVideo(ytid) {
+    changeVideo(ytid, error) {
       let that = this;
-      return new Ember.RSVP.Promise(function(resolve) {
-        that.store.findAll('video')
-          .then(function(videos) {
-          resolve(videos.filterBy('ytid', ytid));
-          });
-      })
-      .then((videos) => {
-        if (videos.length > 0) {
-          let video = videos[0];
-          this.transitionTo('video', video.get('id'));
-        }
-        else {
-          let newVid = this.store.createRecord('video', {
-            ytid: ytid
-          });
-          newVid.save()
-            .then((newVid) => {
-              this.transitionTo('video', newVid.get('id'));
+      if (!error) {
+        return new Ember.RSVP.Promise(function(resolve) {
+          that.store.findAll('video')
+            .then(function(videos) {
+            resolve(videos.filterBy('ytid', ytid));
             });
-        }
-      });
+        })
+        .then((videos) => {
+          if (videos.length > 0) {
+            let video = videos[0];
+            this.transitionTo('video', video.get('id'));
+          }
+          else {
+            let newVid = this.store.createRecord('video', {
+              ytid: ytid
+            });
+            newVid.save()
+              .then((newVid) => {
+                this.transitionTo('video', newVid.get('id'));
+              });
+          }
+        });
+      } else {
+        this.get('flashMessages').danger(error);
+      }
     },
     signOut () {
       this.get('auth').signOut()
