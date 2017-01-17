@@ -1,4 +1,4 @@
-<form {{action 'save' on='submit'}}>
+<form class="edit-riff-panel" {{action 'save' on='submit'}}>
   {{textarea class="edit-riff-box" placeholder="Edit your riff here!" value=riff.text}}
   <button type="submit" class="btn btn-submit edit-riff-btn">Submit</button>
   <button {{action 'cancel'}} class='btn cancel-riff-btn'>Cancel</button>

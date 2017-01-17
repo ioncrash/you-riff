@@ -57,14 +57,37 @@ ul {
 }
 
 .edit-riff-box {
-  height: 440px;
+  -moz-appearance: textfield-multiline;
+  -webkit-appearance: textarea;
+  border: 1px solid gray;
+  height: 325px;
   overflow: auto;
+  padding: 2px;
+  resize: both;
   width: 100%;
-  word-wrap: normal;
+
+  @media (max-width: 992px) {
+    width: 640px;
+  };
 }
 
 .edit-riff-btn {
+  clear: both;
   height: 31px;
+}
+
+.edit-riff-panel {
+  height: 33px;
+  margin-top: 2px;
+  width: calc(100% - 52.5px);
+
+  @media (max-width: 992px) {
+    width: calc(640px - 52.5px);
+  };
+
+  @media (max-width: 698px) {
+    width: calc(100% - 52.5px);
+  }
 }
 
 .navbar-form {
