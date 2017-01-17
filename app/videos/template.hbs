@@ -1,4 +1,21 @@
+<div class="container">
 {{#each model as |video|}}
-  {{ember-youtube ytid=video.ytid}}
+  <div class="row">
+      <div class="col-md-8 col-lg-7">
+        {{ember-youtube ytid=video.ytid}}
+      </div>
+      <div class="col-md-4 col-lg-5">
+        <div>
+          <h3>This has {{video.riffs.length}} riffs! Want to join in?</h3>
+            <button {{action 'openVideo' video}}>Riff on this!</button>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+
+
+  {{!-- {{ember-youtube ytid=video.ytid}}
   <button {{action 'openVideo' video}}>Riff on this!</button>
-{{/each}}
+  {{video.users}} --}}
