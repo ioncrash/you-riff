@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict';
   const ENV = {
-    modulePrefix: 'you-riff',
+    modulePrefix: 'ga-wdi-boston.you-riff',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
