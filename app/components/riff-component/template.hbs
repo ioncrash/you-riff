@@ -1,10 +1,10 @@
 {{#if isDisplayed}}
-  {{#link-to 'riff' riff}}:
+  {{#link-to 'riff' riff}}
 
 {{#if isUser}}
-  <span class="user-riff">{{riff.user.email}}</span>
+  <span class="user-riff">{{riff.user.email}}</span>:
 {{else}}
-  {{riff.user.email}}
+  {{riff.user.email}}:
 {{/if}}
   {{riff.text}}
   <span class="riff-stamp">-- @{{stampTime}}</span>{{/link-to}}
