@@ -20,8 +20,8 @@ export default Ember.Component.extend({
       // console.log(this.get('riff'))
     },
     flagRiff() {
-      console.log(this.get('riff.user.email'))
-      console.log(this.get('user'))
+      console.log(this.get('riff.user.email'));
+      console.log(this.get('user'));
     }
   }
 });

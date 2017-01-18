@@ -19,6 +19,7 @@ export default Ember.Route.extend({
       riff.destroyRecord()
         .then(()=>{
           this.transitionTo('video', video);
-        })
+        });
     },
+  }
 });

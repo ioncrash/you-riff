@@ -1,6 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  auth: Ember.inject.service(),
+  user: Ember.computed.alias('auth.credentials.email'),
+
+  isUser: Ember.computed('user', 'riff.user.email', function() {
+    return this.get('riff.user.email') === this.get('user');
+  }),
+
   currentTime: 0,
   stampTime: Ember.computed('stamp', function() {
     let d = Number(this.get('riff.stamp'));

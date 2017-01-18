@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       this.sendAction('createRiff', newRiff);
     },
     clickRiff(riff) {
-      console.log('in video-deck, riff is ', riff)
+      console.log('in video-deck, riff is ', riff);
     }
   },
 });
