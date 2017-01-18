@@ -24,6 +24,12 @@ module.exports = function (environment) {
     },
   };
 
+  if (environment === 'production') {
+  ENV.rootURL = 'you-riff';
+  ENV.locationType = 'hash';
+  ENV.apiHost = `https://quiet-lowlands-87275.herokuapp.com`;
+}
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
