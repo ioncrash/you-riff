@@ -4,6 +4,9 @@ export default Ember.Route.extend({
   model (params) {
     return this.get('store').findRecord('riff', params.riff_id);
   },
+
+  currentTime: null,
+
   actions: {
     save(riff) {
       riff.save();
@@ -20,6 +23,9 @@ export default Ember.Route.extend({
         .then(()=>{
           this.transitionTo('video', video);
         });
+    },
+    timeChanged(currentTime) {
+      this.set('currentTime', currentTime);
     },
   }
 });
