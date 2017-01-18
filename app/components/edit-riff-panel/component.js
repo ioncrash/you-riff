@@ -19,9 +19,5 @@ export default Ember.Component.extend({
       this.sendAction('deleteRiff', this.get('riff'));
       // console.log(this.get('riff'))
     },
-    flagRiff() {
-      console.log(this.get('riff.user.email'));
-      console.log(this.get('user'));
-    }
   }
 });
