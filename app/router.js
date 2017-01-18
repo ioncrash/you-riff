@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('videos');
   this.route('video', { path: 'videos/:video_id' });
   this.route('riff', { path: 'riffs/:riff_id' });
+  this.route('about');
 });
 
 export default Router;
