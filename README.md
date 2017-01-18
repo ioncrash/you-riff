@@ -2,7 +2,7 @@ You-Riff
 
 # LINKS #
 
-Link to deployed front end: https://github.com/ioncrash/you-riff
+Link to deployed front end: https://ioncrash.github.io/you-riff/
 Link to back end repo: https://github.com/ioncrash/you-riff-back-end
 
 # DESCRIPTION #
