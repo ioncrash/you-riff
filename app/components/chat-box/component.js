@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
   classNameBindings: ['chat-box'],
   videoTime: Ember.computed.alias('currentTime'),
   sortedRiffs: Ember.computed.sort('video.riffs', 'sortDefinition'),
