@@ -1,74 +1,63 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+You-Riff
 
-# Authentication in Ember
+# LINKS #
 
-This training will involve a lot of following code and and exploring the
-Chrome Inspector and utilizing Ember Inspector.  It is recommended that you
-comment code or take notes.
+Link to deployed front end: https://github.com/ioncrash/you-riff
+Link to back end repo: https://github.com/ioncrash/you-riff-back-end
 
-## Prerequisites
+# DESCRIPTION #
 
--   [Ember Resources](https://github.com/ga-wdi-boston/ember-resources)
+You-Riff is a place where YouTube becomes more social and more informative. One of our favorite experiences is watching a film with a group of friends, sharing thoughts or cracking jokes at what's going on on the screen. You-Riff lets you do that virtually, without having to say "go to 4:31!" Just sign-up, add a video to our system, and get riffing!
 
-## Objectives
+# TECH #
 
-By the end of this, developers should be able to:
+* Youtube API
+* ember-youtube npm package
+* Ember framework
+* Twitter Bootstrap
+* Javascript
+* Grunt
+* Sass
 
--   Implement token authentication in an Ember application.
--   Enforce authentication in protected routes.
+# APPROACH #
 
-## Preparation
+I wanted to make an app that did one thing well: let users make comments which are attached to a specific moment on a video, to simplify the process of discussing video content. I started by figuring out how to get youtube working on my site, and spent some time just playing with options (what looked best, what gave me the best access to internal attributes, what was easiest to work with).
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1.  Install dependencies with `npm install` and `bower install`.
-1.  Start any API based on a recent version of the [Rails API
-    Template](https://github.com/ga-wdi-boston/rails-api-template) or the
-    [Express API
-    Template](https://github.com/ga-wdi-boston/express-api-template).
-1.  Start the front-end server with `ember server`.
+After settling on a player and a direction for the project, I started to work on how to structure my backend data, so that I would have to do the least amount of processing in order to make it render correctly on the frontend. I settled on a riffs table, connecting users to videos in our system.
 
-## From end to end
+I think the biggest conceptual challenge was figuring out how to hold videos in the system. I certainly didn't want to host the videos themselves (as that is both data-heavy and probably a copyright violation), so I settled on just hanging onto the youtube ids. This has the advantage of letting me hold on to a large number of videos, and makes it fairly easy for the system to avoid duplicating content. However, it makes it difficult to identify youtube urls that are broken. This is a challenge for the future.
 
-Watch as I sign up for a new account on our demo app.
+After this, I worked on building the chat-box and holding onto the riffs themselves. Most of this was familiar as it's just text, but moving the data through Ember was occasionally a challenge.
 
-*Other than the flash messages on the page, did anything change?  What about in
-the Chrome Developer Tools?*
+In the end, I think the site is pretty slick, and I'm proud of what I've done!
 
-Take some time and sign in on your own, and check to see if anything in the
-Chrome Dev Tools has changed.
+# CHALLENGES #
 
-Now that we have added a key tool to our personal developer toolkit lets look
-at how it's implemented.
+* Working with Ember -- getting access to data, making sure that everything is named and called correctly. Ember is VERY opinionated, and we had some communication issues at first.
+* Figuing out how to model video information on the backend -- how to avoid duplicate videos, how to make sure users and videos could see each other
 
-## Follow Along
+# UNSOLVED PROBLEMS #
 
-Let's walk through file by file to see what's happening.  I will ask
-developers to guide me through the files while correcting any misunderstandings.
+Would like to give users the option of muting one another -- this would require a new table, 'muteds', which would have a user reference (who is the person doing the muting) and a mutee reference ( who is being muted ).
 
-First let's start down the template and component trail, then we'll work our way
-up with actions.
+I'd also like to give users a way to see who is riffing on what video from the /videos route, and what videos users have riffed on from a /users/:id route
 
-*Remember: Data down, actions up.*
+# INSTALLATION #
 
-While going up the Ember hierarchy we may need to stop a some point to discuss
-services.
+``npm install``
 
-## Additional Resources
+# USER STORIES #
 
--   [Implementing Authentication with Ember Services - Ember
-    Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
--   [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is
-    compatible with token-based authentication like
-    JWT.](https://github.com/jpadilla/ember-simple-auth-token)
--   [simplabs/ember-simple-auth: A library for implementing
-    authentication/authorization in Ember.js
-    applications.](https://github.com/simplabs/ember-simple-auth)
--   [Create your first Ember 2.0 app: From authentication to calling an
-    API](https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/)
+I am a film buff, and I want to point out interesting frames as a video is playing so that people can understand what I'm talking about without having to FF and RW through a video.
 
-## [License](LICENSE)
+I am a heavy social media user, and I want to share videos I've commented on with my friends by copy-pasting a url into a text.
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+I am a parent, and I want to flag offensive riffs so that a moderator can review and possibly remove them
+
+# WIREFRAMES #
+
+http://imgur.com/a/vXlZp
+
+# ERD #
+
+http://imgur.com/a/3NjHm
