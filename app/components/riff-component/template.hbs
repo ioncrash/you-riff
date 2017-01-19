@@ -4,7 +4,7 @@
 {{#if isUser}}
   <span class="user-riff">{{riff.user.email}}</span>:
 {{else}}
-  {{riff.user.email}}:
+  <span class="other-riff">{{riff.user.email}}</span>:
 {{/if}}
   {{riff.text}}
   <span class="riff-stamp">-- @{{stampTime}}</span>{{/link-to}}

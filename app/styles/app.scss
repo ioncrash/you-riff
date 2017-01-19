@@ -4,6 +4,7 @@
 $background: rgb(241, 241, 241);
 $blue: #0000FF;
 $grey: #808080;
+$red: #8B0000;
 $riff-time: rgb(179, 179, 179);
 
 body {
@@ -134,6 +135,10 @@ ul {
   text-indent: -22px;
 }
 
+.other-riff {
+  color: $blue;
+}
+
 .riff-stamp {
   color: $riff-time;
 }
@@ -170,5 +175,5 @@ ul {
 }
 
 .user-riff {
-  color: $blue;
+  color: $red;
 }
