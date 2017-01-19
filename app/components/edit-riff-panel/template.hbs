@@ -1,9 +1,7 @@
 <form class="edit-riff-panel" {{action 'save' on='submit'}}>
   <h4 class="edit-email">{{riff.user.email}} @{{stampTime}}</h4>
-  {{textarea class="edit-riff-box" placeholder="Edit your riff here!" value=riff.text}}
-  {{#if isUser}}
-    <button type="submit" class="btn btn-submit edit-riff-btn">Submit</button>
-    <button {{action 'cancel'}} class='btn cancel-riff-btn'>Cancel</button>
-    <button {{action 'deleteRiff'}} class='btn delete-riff-btn btn-danger'>Delete</button>
-  {{/if}}
+  {{textarea class="edit-riff-box" placeholder="Edit your riff here!" value=riff.text disabled=cantEdit}}
+  <button type="submit" class="btn btn-submit edit-riff-btn" disabled={{cantEdit}}>Submit</button>
+  <button {{action 'cancel'}} class='btn cancel-riff-btn' disabled={{cantEdit}}>Cancel</button>
+  <button {{action 'deleteRiff'}} class='btn delete-riff-btn btn-danger' disabled={{cantEdit}}>Delete</button>
 </form>
