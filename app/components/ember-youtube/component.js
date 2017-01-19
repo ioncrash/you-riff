@@ -260,7 +260,9 @@ import Ember from 'ember';
   			return value;
   		},
   		set(key, value) {
-        this.sendAction('timeChanged', value);
+        if (value) {
+          this.sendAction('timeChanged', value);
+        }
   			return value;
   		}
   	}),
