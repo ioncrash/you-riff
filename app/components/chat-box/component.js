@@ -27,6 +27,9 @@ export default Ember.Component.extend({
     },
     clickRiff() {
       this.sendAction('clickRiff', this.get('riff'));
+    },
+    newRiffHappened() {
+      console.log("in chat-box, newRiffHappened")
     }
   }
 });

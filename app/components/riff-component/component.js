@@ -22,6 +22,7 @@ export default Ember.Component.extend({
   }),
 
   isDisplayed: Ember.computed('currentTime', 'stamp', function() {
+    this.sendAction('newRiffHappened');
     return this.get('riff').get('stamp') < this.get('currentTime');
   }),
 });
