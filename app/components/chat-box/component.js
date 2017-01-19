@@ -36,8 +36,5 @@ export default Ember.Component.extend({
     clickRiff() {
       this.sendAction('clickRiff', this.get('riff'));
     },
-    test() {
-      console.log(this.get('chatBoxScrollTop'))
-    }
   }
 });
