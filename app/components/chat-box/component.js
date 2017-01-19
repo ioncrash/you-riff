@@ -6,9 +6,20 @@ export default Ember.Component.extend({
   videoTime: Ember.computed.alias('currentTime'),
   sortedRiffs: Ember.computed.sort('video.riffs', 'sortDefinition'),
   sortDefinition: ['stamp'],
+  chatBoxHeight: Ember.computed(function(){
+    return this.$('.chat-box')[0].scrollHeight;
+  }),
+  chatBoxClientHeight: Ember.computed(function() {
+    return this.$('.chat-box')[0].clientHeight;
+  }),
+  chatBoxScrollTop: Ember.computed(function() {
+    return this.$('.chat-box')[0].scrollTop;
+  }),
+
+  // isScrolledToBottom: Ember.computed(this.$('.chat-box')[0].scrollHeight out.scrollHeight - out.clientHeight <= out.scrollTop + 1;
 
   newRiff: {
-    text: null,
+    text: '',
     flagged: false,
   },
 
@@ -19,17 +30,14 @@ export default Ember.Component.extend({
         data.video = this.get('video');
         data.stamp = this.get('videoTime');
         this.sendAction('createRiff', this.get('newRiff'));
-        this.set('newRiff', {
-          text: null,
-          flagged: false
-        });
+        this.set('newRiff.text', null);
       }
     },
     clickRiff() {
       this.sendAction('clickRiff', this.get('riff'));
     },
-    newRiffHappened() {
-      console.log("in chat-box, newRiffHappened")
+    test() {
+      console.log(this.get('chatBoxScrollTop'))
     }
   }
 });
