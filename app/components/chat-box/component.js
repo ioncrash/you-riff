@@ -1,11 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  auth: Ember.inject.service(),
+
+  user: Ember.computed.alias('auth.credentials.email'),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   classNameBindings: ['chat-box'],
   videoTime: Ember.computed.alias('currentTime'),
   sortedRiffs: Ember.computed.sort('video.riffs', 'sortDefinition'),
   sortDefinition: ['stamp'],
+  notAuthenticated: Ember.computed('isAuthenticated', function() {
+    return !this.get('isAuthenticated');
+  }),
+
   chatBoxHeight: Ember.computed(function(){
     return this.$('.chat-box')[0].scrollHeight;
   }),
@@ -15,6 +23,7 @@ export default Ember.Component.extend({
   chatBoxScrollTop: Ember.computed(function() {
     return this.$('.chat-box')[0].scrollTop;
   }),
+
 
   // isScrolledToBottom: Ember.computed(this.$('.chat-box')[0].scrollHeight out.scrollHeight - out.clientHeight <= out.scrollTop + 1;
 
