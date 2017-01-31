@@ -40,6 +40,7 @@ module.exports = function (environment) {
     //   p + c.charCodeAt().toString(16), '')
     // );
     ENV.apiHost = `https://quiet-lowlands-87275.herokuapp.com/`;
+    // ENV.apiHost = `https://localhost:` + port;
   }
 
   if (environment === 'test') {

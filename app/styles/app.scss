@@ -1,11 +1,13 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
-$background: rgb(241, 241, 241);
-$blue: #0000FF;
+$background: rgb(198, 198, 198);
+$black: rgb(0,0,0);
+$blue: rgb(26, 117, 255);
 $grey: #808080;
 $red: #8B0000;
 $riff-time: rgb(179, 179, 179);
+$white: rgb(255,255,255);
 
 body {
   background-color: $background;
@@ -31,6 +33,7 @@ ul {
 }
 
 .cancel-riff-btn {
+  background-color: $white;
   height: 31px;
 }
 
@@ -46,7 +49,8 @@ ul {
 .chat-box {
   -moz-appearance: textfield-multiline;
   -webkit-appearance: textarea;
-  border: 1px solid $grey;
+  background-color: $black;
+  border-radius: 5px;
   height: 325px;
   overflow: auto;
   padding: 2px;
@@ -58,13 +62,23 @@ ul {
   };
 }
 
+.clear-class {
+  clear: both;
+}
+
 .container {
   margin: 0;
 }
 
 .create-riff-box {
+  background-color: $black;
+  border-color: black;
+  border-radius: 5px;
+  color: $white;
   height: 33px;
   margin-top: 2px;
+  padding-left: 5px;
+  padding-top: 4px;
   width: calc(100% - 52.5px);
 
   @media (max-width: 992px) {
@@ -77,8 +91,10 @@ ul {
 }
 
 .create-riff-btn {
+  background-color: $white;
   margin-top: -25px;
   position: relative;
+  width: 48.5px;
 }
 
 .edit-email {
@@ -88,10 +104,14 @@ ul {
 .edit-riff-box {
   -moz-appearance: textfield-multiline;
   -webkit-appearance: textarea;
+  background-color: $black;
   border: 1px solid $grey;
+  border-color: $black;
+  border-radius: 5px;
+  color: $white;
   height: 300px;
   overflow: auto;
-  padding: 2px;
+  padding: 5px;
   resize: both;
   width: 100%;
 
@@ -101,6 +121,7 @@ ul {
 }
 
 .edit-riff-btn {
+  background-color: $white;
   clear: both;
   height: 31px;
 }
@@ -137,10 +158,21 @@ ul {
 
 .other-riff {
   color: $blue;
+  font-size: 11px;
+}
+
+.user-riff {
+  color: $red;
+  font-size: 11px;
 }
 
 .riff-stamp {
   color: $riff-time;
+  font-size: 11px;
+}
+
+.riff-text {
+  color: $white;
 }
 
 .riff-user {
@@ -174,6 +206,6 @@ ul {
   margin: 100px;
 }
 
-.user-riff {
-  color: $red;
+.html5-video-player {
+  border-radius: 5px;
 }
