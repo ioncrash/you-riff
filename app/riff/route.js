@@ -10,6 +10,7 @@ export default Ember.Route.extend({
   actions: {
     save(riff) {
       riff.save();
+      this.transitionTo('video', riff.get('video'));
     },
 
     cancel(riff) {
