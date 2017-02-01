@@ -127,7 +127,6 @@ ul {
 }
 
 .edit-riff-panel {
-  height: 33px;
   margin-top: 2px;
   width: calc(100% - 52.5px);
 
@@ -143,6 +142,12 @@ ul {
 .flag-riff-button {
   clear: both;
   height: 31px;
+}
+
+.footer-comp {
+  clear: both;
+  position: relative;
+
 }
 
 .navbar-form {
